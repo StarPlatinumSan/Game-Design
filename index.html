@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pré-conception | TODO: Nom du jeu</title>
+    <meta name="description" content="Document interne de pré-conception (projet étudiant)." />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Love+Light&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#content">Aller au contenu</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">■</div>
+          <div class="brand__text">
+            <div class="brand__title" style="color:aliceblue">Pré-conception</div>
+            <div class="brand__subtitle" style="color: whitesmoke">Document interne</div>
+          </div>
+        </div>
+
+        <div class="topbar__actions">
+          <button class="btn btn--ghost" id="btnPrint" type="button">Imprimer</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- QUICK BAR -->
+      <section class="quickbar" aria-label="Accès rapide">
+        <div class="quickbar__left">
+          <div class="quickbar__title">Accès rapide</div>
+          <div class="chips">
+            <a class="chip" href="#one-liner">One-liner</a>
+            <a class="chip" href="#core">Core loop</a>
+            <a class="chip" href="#features">Fonctionnalités</a>
+            <a class="chip" href="#scope">Scope</a>
+            <a class="chip" href="#plan">Plan</a>
+          </div>
+        </div>
+
+        <div class="quickbar__right">
+          <div class="quickbar__title">Filtrer les features</div>
+          <div class="segmented" role="group" aria-label="Filtre fonctionnalités">
+            <button class="segmented__btn is-active" data-filter="all" type="button">Tout</button>
+            <button class="segmented__btn" data-filter="mvp" type="button">Majeur</button>
+            <button class="segmented__btn" data-filter="nice" type="button">Mineur</button>
+            <button class="segmented__btn" data-filter="out" type="button">Hors-scope</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Sommaire">
+          <div class="sidebar__card">
+            <div class="sidebar__title">Sommaire</div>
+            <nav id="toc" class="toc"></nav>
+          </div>
+
+          <div class="sidebar__card">
+            <div class="sidebar__title">Infos rapides</div>
+
+            <!-- TODO: Remplir ces lignes -->
+            <dl class="meta">
+              <div class="meta__row">
+                <dt>Jeu</dt>
+                <dd><span class="todo">TODO: Nom du jeu</span></dd>
+              </div>
+              <div class="meta__row">
+                <dt>Team</dt>
+                <dd>
+                  Andrei Bituleanu
+                  <br />
+                  Gabriel Chan-Dion
+                </dd>
+              </div>
+              <div class="meta__row">
+                <dt>Plateforme</dt>
+                <dd>Steam ou Itch.io</dd>
+              </div>
+              <div class="meta__row">
+                <dt>Modèle</dt>
+                <dd>Free or Premium version (2.99$)</dd>
+              </div>
+              <div class="meta__row">
+                <dt>Dernière MAJ</dt>
+                <dd id="lastUpdated">—</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+
+        <main id="content" class="content">
+          <!-- COVER -->
+          <section class="hero">
+            <!-- TODO: Nom du jeu -->
+            <h1 class="hero__title"><span class="todo">INSERT TITLE HERE</span></h1>
+
+            <!-- TODO: phrase vendeur en 1 ligne -->
+            <p class="hero__lead">
+              <span class="todo">TODO: One-liner</span>
+            </p>
+
+            <div class="hero__grid">
+              <div class="card">
+                <div class="card__kpi">Genre</div>
+                <div class="card__value"><span class="todo">TODO: Narratif / Puzzle / …</span></div>
+              </div>
+              <div class="card">
+                <div class="card__kpi">Durée</div>
+                <div class="card__value"><span class="todo">TODO: 45-90 min</span></div>
+              </div>
+              <div class="card">
+                <div class="card__kpi">USP</div>
+                <div class="card__value"><span class="todo">TODO: Différence clé</span></div>
+              </div>
+              <div class="card">
+                <div class="card__kpi">Ton</div>
+                <div class="card__value"><span class="todo">TODO: Étrange, cosy, …</span></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTIONS -->
+          <section class="section" id="one-liner" data-title="Pitch">
+            <h2>1 - Pitch</h2>
+
+            <h3>One-liner</h3>
+            <p class="fill">
+              <span class="todo">TODO: “Un jeu où …”.</span>
+            </p>
+
+            <h3>What the player does</h3>
+            <ul class="bullets fill">
+              <li><span class="todo">TODO: action principale</span></li>
+              <li><span class="todo">TODO: décision / interaction clé</span></li>
+              <li><span class="todo">TODO: feedback / conséquence</span></li>
+            </ul>
+
+            <h3>Market value</h3>
+            <ul class="bullets fill">
+              <li><span class="todo">TODO: 1 point de différenciation</span></li>
+              <li><span class="todo">TODO: 1 point “émotion” ou “vibe”</span></li>
+            </ul>
+          </section>
+
+          <section class="section" id="core" data-title="Core loop">
+            <h2>2 - Core loop</h2>
+
+            <ol class="steps fill">
+              <li>
+                <strong>Découvrir</strong>
+                :
+                <span class="todo">TODO: explorer / lire / observer</span>
+              </li>
+              <li>
+                <strong>Choisir / résoudre</strong>
+                :
+                <span class="todo">TODO: choix / puzzle / action</span>
+              </li>
+              <li>
+                <strong>Conséquence</strong>
+                :
+                <span class="todo">TODO: narration / changement / score</span>
+              </li>
+              <li>
+                <strong>Progression</strong>
+                :
+                <span class="todo">TODO: nouvel enjeu / nouvelle règle</span>
+              </li>
+            </ol>
+
+            <div class="callout">
+              <div class="callout__title">Piliers (max 3)</div>
+              <div class="tags">
+                <span class="tag todo">TODO: Pilier 1</span>
+                <span class="tag todo">TODO: Pilier 2</span>
+                <span class="tag todo">TODO: Pilier 3</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="features" data-title="Fonctionnalités">
+            <h2>3 - Fonctionnalités</h2>
+
+            <div class="feature-list">
+              <!-- MVP -->
+              <article class="feature" data-tag="mvp">
+                <div class="feature__head">
+                  <span class="badge badge--mvp">Majeur</span>
+                  <h3 class="feature__title"><span class="todo">TODO: Feature Majeur 1</span></h3>
+                </div>
+                <p class="feature__desc fill"><span class="todo">TODO: description.</span></p>
+                <ul class="mini fill">
+                  <li>
+                    <strong>Critère fini</strong>
+                    :
+                    <span class="todo">TODO: comment on sait que c’est terminé</span>
+                  </li>
+                  <li>
+                    <strong>Risque</strong>
+                    :
+                    <span class="todo">TODO: faible / moyen / haut</span>
+                  </li>
+                </ul>
+              </article>
+
+              <article class="feature" data-tag="mvp">
+                <div class="feature__head">
+                  <span class="badge badge--mvp">Majeur</span>
+                  <h3 class="feature__title"><span class="todo">TODO: Feature Majeur 2</span></h3>
+                </div>
+                <p class="feature__desc fill"><span class="todo">TODO: description.</span></p>
+                <ul class="mini fill">
+                  <li>
+                    <strong>Critère fini</strong>
+                    :
+                    <span class="todo">TODO</span>
+                  </li>
+                  <li>
+                    <strong>Risque</strong>
+                    :
+                    <span class="todo">TODO</span>
+                  </li>
+                </ul>
+              </article>
+
+              <!-- NICE -->
+              <article class="feature" data-tag="nice">
+                <div class="feature__head">
+                  <span class="badge badge--nice">Mineur</span>
+                  <h3 class="feature__title"><span class="todo">TODO: Feature Mineur 1</span></h3>
+                </div>
+                <p class="feature__desc fill"><span class="todo">TODO: description.</span></p>
+              </article>
+
+              <!-- OUT OF SCOPE -->
+              <article class="feature" data-tag="out">
+                <div class="feature__head">
+                  <span class="badge badge--out">Hors-scope</span>
+                  <h3 class="feature__title"><span class="todo">TODO: On ne fait pas ça</span></h3>
+                </div>
+                <p class="feature__desc fill"><span class="todo">TODO: pourquoi on ne le fait pas (trop long, trop dur, pas utile).</span></p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section" id="scope" data-title="Scope & contraintes">
+            <h2>4 - Scope et contraintes</h2>
+
+            <div class="grid-2">
+              <div class="panel">
+                <h3>Scope (ce qu’on livre)</h3>
+                <ul class="bullets fill">
+                  <li><span class="todo">TODO: contenu minimal (chapitres, niveaux, scènes)</span></li>
+                  <li><span class="todo">TODO: système principal</span></li>
+                  <li><span class="todo">TODO: UX minimale</span></li>
+                </ul>
+              </div>
+
+              <div class="panel">
+                <h3>Contraintes (2 personnes)</h3>
+                <ul class="bullets fill">
+                  <li><span class="todo">TODO: limites art (ex: pas d’anim complexes)</span></li>
+                  <li><span class="todo">TODO: limites tech (ex: pas de multi)</span></li>
+                  <li><span class="todo">TODO: limites temps (ex: 8-10 semaines)</span></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="plan" data-title="Plan simple">
+            <h2>5 - Plan simple</h2>
+
+            <div class="timeline">
+              <div class="timeline__item">
+                <div class="timeline__date">Submission 1</div>
+                <div class="timeline__content">
+                  <div class="timeline__title">Prototype</div>
+                  <p class="fill"><span class="todo">TODO: playable game and loop.</span></p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <div class="timeline__date">Submission 2</div>
+                <div class="timeline__content">
+                  <div class="timeline__title">Pre-Alpha</div>
+                  <p class="fill"><span class="todo">TODO: core features + début/fin jouables.</span></p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <div class="timeline__date">Submission 3</div>
+                <div class="timeline__content">
+                  <div class="timeline__title">Alpha</div>
+                  <p class="fill"><span class="todo">TODO: bugs, UX, audio, full playable game.</span></p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <div class="timeline__date">Submission 4</div>
+                <div class="timeline__content">
+                  <div class="timeline__title">Beta</div>
+                  <p class="fill"><span class="todo">TODO: finalized product.</span></p>
+                </div>
+              </div>
+
+              <div class="timeline__item">
+                <div class="timeline__date">Submission 5</div>
+                <div class="timeline__content">
+                  <div class="timeline__title">Full-release</div>
+                  <p class="fill"><span class="todo">TODO: Complete all goals.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <footer class="doc-footer">
+              <div class="doc-footer__line"></div>
+              <p class="muted">
+                Document interne. Dernière mise à jour :
+                <span id="lastUpdated2">—</span>
+              </p>
+            </footer>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
